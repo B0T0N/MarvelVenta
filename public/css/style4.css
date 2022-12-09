@@ -1,0 +1,166 @@
+body{
+    background: #8e2323;
+    margin: 0%;
+    padding: 0%;
+}
+
+main{
+    margin: 0px;
+    padding: 0px;
+}
+
+#side_nav{
+    background-color: #ffffff;
+    min-width: 250px;
+    max-width: 250px;
+}
+
+.content{
+    min-height: 600px;
+    width: 82%;
+}
+
+.balsa{
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+    border-radius: 30px;
+    width: 100%;
+    max-height: 80%;
+}
+
+.table_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 0;
+}
+
+.nuevo{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: #081ae4;
+    color: #eeeeee;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.barra{
+    max-height: 500px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+
+.nuevo:hover{
+    background-color: #3707bb;
+    color: #eeeeee;
+}
+
+.categoria{
+    border: none;
+    border-bottom: 1px solid #848484;
+    width: 200px;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.input_search{
+    position: relative;
+}
+
+.buscar{
+    border-radius: 30px;
+    width: 400px;
+    outline: none;
+    padding: 10px 20px;
+    border: 1px solid #abaaaa;
+    box-sizing: border-box;
+    padding-right: 50px;
+}
+
+/*font-family: 'Poor Story', cursive;*/
+
+hr.h-color{
+    background: #eee;
+}
+
+.sidebar li.active{
+    background: #eee;
+    border-radius: 8px;
+}
+
+.sidebar li.active a, .sidebar li.active a:hover{
+    color: rgb(0, 0, 0);
+}
+
+.sidebar li a{
+    color: rgb(0, 0, 0);
+}
+
+.sidebar li:hover, .sidebar li a:hover{
+    background: #eeeeee;
+    border-radius: 8px;
+    color: #000000;
+}
+
+#icon {
+    padding: 0 5px;
+}
+
+/* Diseño de form */
+
+.modaleso{
+    position: fixed;
+    top: 10%;
+    left: 33%;
+    background: rgba(0,0,0,0.5);
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#ver-modal:checked ~ .modaleso{
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedores{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background: #eeeeee;
+    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+    transition: all 500ms ease;
+}
+
+.contenedores header{
+    padding: 10px;
+    background: #330282;
+    color: #eeeeee;
+}
+
+.contenedores .redit{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #eeeeee;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#ver-modal{
+    display: none;
+}
+
+.botones{
+    display: inline;
+    margin-right: 5px;
+}
+
+.photo{
+    width: 120px;
+}
