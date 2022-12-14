@@ -15,9 +15,9 @@ class RegisterController extends Controller {
     public function store() {
 
         $this->validate(request(), [
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|confirmed',
+            'name' => 'required|regex:/^[\pL\s\-]+$/u',
+            'email' => 'required',
+            'password' => 'required',
         ]);
 
         $user = User::create(request(['name', 'email', 'password']));

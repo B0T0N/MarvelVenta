@@ -43,7 +43,11 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Categoria::$rules);
+        //request()->validate(Categoria::$rules);
+
+        $this->validate(request(), [
+            'nombre' => 'required|regex:/^[\pL\s\-]+$/u',
+        ]);
 
         $categoria = Categoria::create($request->all());
 

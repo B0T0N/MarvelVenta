@@ -24,12 +24,6 @@
             <a class="nav-link" href="{{ route('vistas.index') }}">{{ __('vista') }}</a>
         </li>
       @if(auth()->check())
-        <li li class="nav-item mx-4">
-            <a class="nav-link" href="{{ route('comentarios.index') }}">{{ __('Comentarios') }}</a>
-        </li>
-        <li class="nav-item mx-4">
-            <a class="nav-link" href="{{ route('productos.index') }}">{{ __('Produtos') }}</a>
-        </li>
         
         <li class="mx-8">
           <p class="text-xl" style="color: #eeeeee;">Bienvenido <b>{{ auth()->user()->name }}</b></p>

@@ -14,35 +14,37 @@
   </head>
   <body class="bg-gray-100 text-gray-800">
 
-    <nav class="flex py-3 bg-indigo-500 text-white" style = "background-color: #333333;" >
-      <div class="w-1/2 px-5 mr-auto">
-      <img src="{{ asset('img/logo.png') }}" width="50px" alt="">
-
-        <ul class="navbar-nav me-auto">
-
-          
-          
-        </ul>
-
+    <nav class="flex py-1 bg-indigo-100 text-white" style = "background-color: #333333;" >
+      <div class="px-5 mr-auto pt-3">
+        <img src="{{ asset('img/logo.png') }}" width="50px" alt="">
       </div>
 
-      <ul class="w-1/2 px-5 ml-auto flex justify-end pt-1">
+      <ul class="px-5 ml-auto flex justify-end pt-4">
       @if(auth()->check())
 
-        <li class="nav-item mx-4">
+        <li class="nav-item mx-2">
           <a class="nav-link" href="{{ route('categorias.index') }}">{{ __('Categorias') }}</a>
         </li>
 
-        <li class="nav-item mx-4">
+        <li li class="nav-item mx-2">
+            <a class="nav-link" href="{{ route('comentarios.index') }}">{{ __('Comentarios') }}</a>
+        </li>
+
+        <li class="nav-item mx-2">
+            <a class="nav-link" href="{{ route('productos.index') }}">{{ __('Produtos') }}</a>
+        </li>
+
+        <li class="nav-item mx-2">
           <a class="nav-link" href="{{ route('admin.index') }}">{{ __('Usuarios') }}</a>
         </li>
 
         <li class="mx-8">
           <p class="text-xl">Admin <b>{{ auth()->user()->name }}</b></p>
         </li>
+        
         <li>
           <a href="{{ route('login.destroy') }}" class="font-bold
-          py-3 px-4 rounded-md bg-red-500 hover:bg-red-600" style="color: #eeeeee;">Cerrar Sesion</a>
+          py-3 px-3 rounded-md bg-red-500 hover:bg-red-600" style="color: #eeeeee;">Cerrar Sesion</a>
         </li>
       @else
         <li class="mx-6">

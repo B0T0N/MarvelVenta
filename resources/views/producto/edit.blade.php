@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('template_title')
     Update Producto
@@ -11,10 +11,14 @@
 
                 @includeif('partials.errors')
 
+                
+
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Producto</span>
+                        <span class="card-title">Actializar Producto</span>
+                        <a class="btn btn-primary" href="{{ route('productos.index') }}"> Back</a>
                     </div>
+                    
                     <div class="card-body">
                         <form method="POST" action="{{ route('productos.update', $producto->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
@@ -24,10 +28,12 @@
 
                         </form>
                     </div>
+
+                    
                 </div>
             </div>
         </div>
     </section>
 @endsection
 
-@extends('layouts.fooder')
+

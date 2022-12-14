@@ -14,11 +14,11 @@ rounded-lg shadow-lg">
 
     <input type="email" class="border border-gray-200 rounded-md bg-gray-200 w-full
     text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Correo"
-    id="email" name="email">
+    id="email" name="email" value="{{old('email')}}">
 
     <input type="password" class="border border-gray-200 rounded-md bg-gray-200 w-full
     text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Contraseña"
-    id="password" name="password">
+    id="password" name="password" value="{{old('password')}}">
     
     @error('message')        
       <p class="border border-red-500 rounded-md bg-red-100 w-full

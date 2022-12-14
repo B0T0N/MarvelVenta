@@ -22,7 +22,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $productos = Producto::paginate(2);
+        $productos = Producto::paginate();
 
         return view('producto.index', compact('productos'))
             ->with('i', (request()->input('page', 1) - 1) * $productos->perPage());
@@ -49,6 +49,10 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
+
+        $this->validate(request(), [
+            'nombre' => 'required|regex:/^[\pL\s\-]+$/u',
+        ]);
         // request()->validate(Producto::$rules);
 
         // $producto = Producto::create($request->all());

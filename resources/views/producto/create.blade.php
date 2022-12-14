@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('template_title')
     Create Producto
@@ -14,6 +14,7 @@
                 <div class="card card-default">
                     <div class="card-header">
                         <span class="card-title">Create Producto</span>
+                        <a class="btn btn-primary" href="{{ route('productos.index') }}"> Back</a>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('productos.store') }}"  role="form" enctype="multipart/form-data">
@@ -28,5 +29,3 @@
         </div>
     </section>
 @endsection
-
-@extends('layouts.fooder')

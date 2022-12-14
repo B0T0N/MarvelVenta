@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('template_title')
     {{ $producto->name ?? 'Show Producto' }}
@@ -47,5 +47,3 @@
         </div>
     </section>
 @endsection
-
-@extends('layouts.fooder')

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('template_title')
     Producto
@@ -65,5 +65,3 @@
         </div>
     </div>
 @endsection
-
-@extends('layouts.fooder')
